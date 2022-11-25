@@ -1,0 +1,300 @@
+body {
+  width: auto;
+  position: static;
+  top: 0%; 
+  left: 0%;
+  height: 100%;
+  
+}
+
+/***********************************************************/
+/*CAROUSEL*/
+.carousel {
+  position: relative;
+  top: 60;
+  left: 0;
+  z-index: 9;
+  width: 90%;
+  margin-left: 80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.theSlides {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  display: none;
+}
+
+.vertical-line2 {
+  border-left: 5px solid #000;
+  display: inline-block;
+  height: 300px;
+  margin-left: 20%;
+  margin-right: 5%;
+  
+}
+
+h1 {
+  font-family: "storybook";
+  font-size: 80px;
+  text-align: center;
+  font-weight: normal;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.525);
+}
+h2 {
+  font-family: "geo";
+  font-size: 40px;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px #9fd1ff;
+  color: rgb(0, 0, 0);
+}
+.imageNYC {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.525);
+}
+
+
+/***********************************************************/
+
+
+
+.NewYorkView {
+  margin: 0%;
+  /*position: static;*/
+  
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+
+  opacity: .5;
+
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: "larissa";
+  src: url(../WebFonts/larissa/Larissa.ttf);
+}
+@font-face {
+  font-family: "geo";
+  src: url(../WebFonts/geo_sans_light/GeosansLight.ttf);
+}
+@font-face {
+  font-family: "storybook";
+  src: url(../WebFonts/storybook/Storyboo.TTF);
+}
+@font-face {
+  font-family: "NewYork";
+  src: url(../WebFonts/newyork/NewYork\ PERSONAL\ USE.otf);
+}
+
+
+.navbar_principal {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 29;
+  margin: 0;
+
+  background-color: rgba(217, 217, 217, 0.611);
+  
+  width: 100%;
+
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-family: "larissa";
+  font-size: 1.5em;
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: all 400ms ease-in;
+}
+
+.logo:hover {
+  text-shadow: 3px 3px 4px #63b6ff;
+}
+
+.picture {
+  margin: 10px;
+}
+
+.vertical-line {
+  border-left: 2px solid #000;
+  display: inline-block;
+  height: 100px;
+  margin: 5px 40px;
+  margin-right: 0px;
+
+  display: flex;
+  align-items: center;
+}
+
+.navbar_menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.menu_liste {
+  font-family: "geo";
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.nav_item {
+  margin: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: relative;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+/*.nav_item:hover {
+  border-bottom: 5px solid orange;
+  transform-origin: bottom right;
+  transition: all 0.25s ease-in;
+}
+*/
+.nav_item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -4;
+  left: 0;
+  background-color: #63b6ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+
+  text-decoration: none;
+  color: #000;
+}
+
+.nav_item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  
+}
+
+.search {
+  padding-left: 50px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.recherche {
+  font-family: "geo";
+  color: black;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  height: 30px;
+  border-radius: 7px;
+
+  border: 0;
+}
+
+
+
+
+
+
+.boites {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  
+  opacity: 1;
+
+  position: absolute;
+  
+  left: 0;
+  top: 0;
+  z-index: 5;
+
+  margin-top: 1000;
+  width: 100%;
+  height: 300px;
+}
+
+.theBoxes {
+  width: 400px;
+  margin: 40;
+  cursor: pointer;
+
+  /*position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;*/
+  background-color: #fff;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.318);
+  transition: all 0.3s ease-in-out;
+}
+
+.theBoxes::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  /*width: 100%;*/
+  height: 100%;
+  opacity: 0;
+  
+  transition: opacity 0.3s ease-in-out;
+}
+.theBoxes:hover {
+  transform: scale(1.2, 1.2);
+  border: 5px solid #ffffff;
+  box-shadow: 7px 7px 5px rgb(85, 85, 85);
+  text-shadow: 5px 3px 2px rgb(255, 255, 255);
+}
+.theBoxes:hover::after {
+  opacity: 1;
+}
+
+.hypertextBox {
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+}
+
+.textBox {
+  position: absolute;
+  width: 400px;
+  font-size: 3em;
+  text-align: center;
+  font-family: "NewYork";
+  font-weight: 300;
+}

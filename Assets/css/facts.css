@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "geo";
+    src: url(../WebFonts/geo_sans_light/GeosansLight.ttf);
+}
+@font-face {
+    font-family: "designer";
+    src: url(../WebFonts/designer/DESIGNER.otf);
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#wrapper { 
+    left: 100%;
+    width: 300px; 
+    height: auto; 
+   }
+   .mainsection { 
+    width: 200px; 
+    background: #00AAA0; 
+    position:relative; 
+    clear:both; 
+    overflow: hidden; 
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+   }
+   .shortmenu { 
+    float: right;
+    padding: 5px; 
+    width: 40px; 
+    }
+   .menu-lists { 
+    background: #8ED2C9; 
+    color : #FCF4D9; 
+    width: 200px;  
+    position: absolute; 
+    clear:both;   
+    list-style-type: none; 
+    display: inline-block; 
+    border-top-right-radius: 30px;
+   }
+   ul{ 
+    list-style-type: none; list-style-position: inside; 
+    padding-left: 0; margin: 0px; 
+    font-family: sans-serif;
+   } 
+   .menu-lists ul li{ 
+    font-size: 19px; width: 100%; 
+    height: 50px; display: inline-flex;  
+    border-bottom: solid 1px #57bcaf;
+   }
+   li a { color: #FCF4D9; text-decoration: none; 
+    line-height: 2.5em;  padding-left:10px; 
+    margin-top: 0px; width: 100%;
+   }
+   li a:hover, li a:focus {   
+    background: #FCF4D9; color: #8ED2C9;
+    width: auto + 3px; display: inline-block;
+    border-radius: 30px;
+    height: 50px; 
+   }
+
+   .nav_items {
+    font-family: "geo";
+   }
+
+header {
+    text-align: center;
+    font-family: "designer";
+    color: #8ED2C9;
+    font-size: 2em;
+    margin: 0px;
+}
+
+
+/* LISTE FAITS */
+.Boxes {
+    text-align: left;
+    max-width: 350px;
+    padding-left: 40%;
+    padding-bottom: 100px;
+}
+
+ul {
+    counter-reset: index;  
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;*/
+
+  }
+  
+  /* List element */
+  li {
+    counter-increment: index; 
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  
+  /* Element counter */
+  li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, rgb(27, 92, 195), rgb(104, 193, 154));
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  /* Element separation */
+  li + li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  @use postcss-preset-env {
+    stage: 0;
+    autoprefixer: {
+      grid: true;
+    }
+    browsers: last 2 versions
+  }

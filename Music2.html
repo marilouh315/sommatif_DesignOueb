@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home/À propos/Billboards/Musique</title>
+        <script src="https://kit.fontawesome.com/98b4877a77.js" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+        <style>
+        @font-face {
+            font-family: "Moonrising";
+            src: url(../Som1_Portfolio/Assets/WebFonts/moonrising/Moonrising.otf);
+        }
+        @font-face {
+            font-family: "geo";
+            src: url(../Som1_Portfolio/Assets/WebFonts/geo_sans_light/GeosansLight.ttf);
+        }
+
+        @import 'https://fonts.googleapis.com/css?family=Roboto';
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 100px;
+            line-height: 50%;
+            font-family: "geo";
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .container_principal {
+            height: auto;
+            width: 1500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 300px;
+            margin-left: 200px;
+            margin-right: 0px;
+        }
+        * {
+            box-sizing: border-box;
+            transition-duration: 0.6s;
+        }
+        body {
+
+            font-family: 'Roboto', cursive;
+            background-color: #16a085;
+        }
+        h1, i {
+            font-size: 1.5em;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            opacity: 0;
+            margin-top: 0px;
+            margin-left: 90px;
+            margin-bottom: 300px;
+            line-height: center;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: "geo";
+            text-decoration: none;
+        }
+        h3 {
+            font-size: 3em;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: "Moonrising";
+        }
+        .card:hover h1, .card:hover i {
+            opacity: 1;
+            transform: translateY(10px);
+            text-decoration: none;
+        }
+        .center {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 0px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 400px;
+        }
+        .card {
+            overflow: hidden;
+            background-color: #000;
+            margin: 10px auto;
+            box-shadow: 0 0 10px #054a2d;
+        }
+        i {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .card:hover i {
+            transform: rotate(360deg);
+        }
+        .card:hover img {
+            transform: scale(1.5) rotate(10deg);
+        }
+        .moare {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            align-items: stretch;
+
+
+        }
+        .actions {
+            text-align: center;
+        }
+        .card:hover img {
+            opacity: 0.8;
+        }
+        .card:after {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            content: '';
+            opacity: 1;
+            display: block;
+            transition: all 0.35s ease-out;
+            border-top: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+            -webkit-transform: scaleX(0) !important;
+            -ms-transform: scaleX(0) !important;
+            transform: scaleX(0) !important;
+        }
+        .card:hover:after {
+            z-index: 1000;
+            -webkit-transform: scaleX(1) !important;
+            -ms-transform: scaleX(1) !important;
+            transform: scaleX(1) !important;
+        }
+        .card:before {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            content: '';
+            opacity: 1;
+            display: block;
+            transition: all 0.35s ease-out;
+            border-right: 3px solid #fff;
+            border-left: 3px solid #fff;
+            -webkit-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+            -webkit-transform: scaleY(0) !important;
+            -ms-transform: scaleY(0) !important;
+            transform: scaleY(0) !important;
+        }
+        .card:hover:before {
+            z-index: 1;
+            -webkit-transform: scaleY(1) !important;
+            -ms-transform: scaleY(1) !important;
+            transform: scaleY(1) !important;
+        }
+        
+        .icon_tv {
+            height: 90px;
+            font-size: 200%;
+            color: rgb(160, 221, 237);
+            font-family: "geo";
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background-color: #000;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: rgb(160, 221, 237);
+            border-bottom: none;
+
+        }
+        .fa-brands {
+            margin: 0;
+            color: rgb(160, 221, 237);
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        </style>
+    </head>
+
+
+    
+        <h3>BillBoard de Films/Series & Musique</h3> <a href="../Som1_Portfolio/Music.html" style="text-decoration: none;" ><button class="icon_tv"><i class="fa-brands fa-grav"></i>  Films/Séries</button></a>
+        <h2>Chansons préférées</h2>
+
+        <div class="container_principal">
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/ChasingFire_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Chasing Fire <br />- <br />Lauv</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/Unconditionally_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Unconditionally<br />- <br />Katy Perry</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/UCLA_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>UCLA <br />- <br />RL Grime, 24hrs</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/HTTYD_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Coming Back Around <br />- <br />HTTYD Soundtrack</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/Exless_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Exless <br />- <br />Kate Stephenson</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/TheGoodPart_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>The Good Part <br />- <br />AJR</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/SAY_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Say You Won't Let Go <br />- <br />James Arthur</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/SlowMotion_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Slow Motion <br />- <br />The Next Step</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/History_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>History <br />- <br />Olivia Holt</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/Flowers_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Flowers Need Rain <br />- <br />Preston Pablo</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/AntiHero_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Anti-Hero <br />- <br />Taylor Swift</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card center">
+                <img src="../Som1_Portfolio/Assets/images/Roses_song.jpg" alt="" width="100%" height="100%" />
+                <div class="moare center">
+                    <h1>Roses <br />- <br />Juice WRLD</h1>
+                    <div class="actions">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-plus fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</html>

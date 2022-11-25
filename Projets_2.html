@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Home/Réalisations/Akinator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../Som1_Portfolio/Assets/css/ProjetsCSS/main.css" />
+		<noscript><link rel="stylesheet" href="../Som1_Portfolio/Assets/css/ProjetsCSS/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../Som1_Portfolio/index.html" target="blank" rel="noopener noreferrer" class="logo">
+									<span class="symbol"><img src="../Som1_Portfolio/Assets/images/space-astronaut-BGREMOVED.png" alt="" /></span><span class="title">Portfolio-Marilou</span>
+								</a>
+
+							
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header> 
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Bruh</h2>
+						<ul>
+							<li><a href="../Som1_Portfolio/index.html" target="blank" rel="noopener noreferrer">Home</a></li>
+							<li><a href="../Som1_Portfolio/Portfolio_About.html" target="blank" rel="noopener noreferrer">À propos</a></li>
+							<li><a href="../Som1_Portfolio/Portfolio_Projets.html">Réalisations</a></li>
+							<li><a href="../Som1_Portfolio/Portfolio_Contacts.html" target="blank" rel="noopener noreferrer">Contacts</a></li>
+							<input type="text" class="recherche" placeholder="Recherche" name="recherche">
+						</ul>
+					</nav> 
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Akinator</h1>
+							<span class="image main"><img src="../Som1_Portfolio/Assets/images/akinator.png" alt="" width="40%" /><img src="../Som1_Portfolio/Assets/images/CSharp_Akinator.png" height="20%" width="60%" /></span>
+							<p>Cours : Programmation (1ere session TI) 
+								<br>Exercice de programmation « Akinator », qui tentera de deviner un nombre.
+							</p>
+							<pre id="CSharp_code"><code >namespace Labo_Genie
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Demander à l'utilisateur s'il veut rejouer 
+            //sans être obligé d'aller dans le programme et écrire des while et des if...
+            
+            bool jouer = true;
+            string choixJoueur = "";
+            
+            while (jouer)
+            {
+                // Méthode du jeu (code plus bas)
+                devine2();
+                Console.Clear();
+                Console.WriteLine("Rejouer? o/n");
+                choixJoueur = Console.ReadLine();
+
+                if (choixJoueur =="n")
+                {
+                    jouer = false;
+                }
+            }
+        }
+
+        static void devine2()
+        {
+            bool vrai = true;
+            string reponse = "";
+            int min = 1;
+            int max = 100;
+            int nombredevine = 0;
+
+            Console.WriteLine("Pensez à un nombre entre 1 et 100, je vais tenter de deviner votre nombre...");
+            Console.WriteLine("Appuyer pour continuer");
+            Console.ReadKey();
+
+            Console.WriteLine("Votre nombre est 50?");
+            Console.WriteLine("Oui (o), plus grand que 50 (+), plus petit que 50 (-)");
+            reponse = Console.ReadLine();
+
+            while (vrai)
+            {
+                if (reponse == "+")
+                {
+                    min = 51;
+                    nombredevine = (min + max) / 2;
+                    while (vrai)
+                    {
+                        Console.WriteLine("Votre nombre est " + nombredevine + "?");
+                        Console.WriteLine("Oui (o), plus grand que " + nombredevine + " (+), plus petit que " + nombredevine + " (-)");
+                        reponse = Console.ReadLine();
+
+                        if (reponse == "+")
+                        {
+                            min = nombredevine;
+                            nombredevine = (min + max) / 2;
+                        }
+                        else if (reponse == "-")
+                        {
+                            max = nombredevine;
+                            nombredevine = (min + max) / 2;
+                        }
+                        if (reponse == "o")
+                        {
+                            Console.WriteLine("J'ai réussi! Yay, j'ai deviné votre nombre à " + nombredevine);
+                            vrai = false;
+                            Console.ReadKey();
+                        }
+                    }
+                }
+                else if (reponse == "-")
+                {
+                    // Entre 1 et 50 (pour ne pas avoir des chiffres à virgules)
+                    max = 49;
+                    nombredevine = (min + max) / 2;
+
+                    while (vrai)
+                    {
+                        Console.WriteLine("Votre nombre est " + nombredevine + "?");
+                        Console.WriteLine("Oui (o), plus grand que " + nombredevine + " (+), plus petit que " + nombredevine + " (-)");
+                        reponse = Console.ReadLine();
+
+                        if (reponse == "o")
+                        {
+                            Console.WriteLine("J'ai réussi! Yay, j'ai deviné votre nombre à " + nombredevine);
+                            vrai = false;
+                            Console.ReadKey();
+                        }
+                        else if (reponse == "+")
+                        {
+                            min = nombredevine;
+                            nombredevine = (min + max) / 2;
+                        }
+                        else if (reponse == "-")
+                        {
+                            max = nombredevine;
+                            nombredevine = (min + max) / 2;
+                        }
+                    }
+                }
+                else if (reponse == "o")
+                {
+                    nombredevine = 50;
+                    vrai = false;
+                    Console.WriteLine("J'ai réussi! Yay, j'ai deviné votre nombre à " + nombredevine);
+                    Console.ReadKey();
+                }
+            }
+        }
+    }
+}
+                            
+                            </code><button onclick="copyText()">Copy</button></pre>
+						</div>
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+        <script src="../Som1_Portfolio/Assets/js/ProjetsJS/jquery.min.js"></script>
+        <script src="../Som1_Portfolio/Assets/js/ProjetsJS/browser.min.js"></script>
+        <script src="../Som1_Portfolio/Assets/js/ProjetsJS/breakpoints.min.js"></script>
+        <script src="../Som1_Portfolio/Assets/js/ProjetsJS/util.js"></script>
+        <script src="../Som1_Portfolio/Assets/js/ProjetsJS/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home/À propos/Travels</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica", sans-serif;
+      }
+      img {
+        max-width: 100%;
+      }
+      .slider-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .menu {
+        position: absolute;
+        left: 0;
+        z-index: 900;
+        width: 100%;
+        bottom: 0;
+      }
+      .menu label {
+        cursor: pointer;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 50px;
+        margin: 0 0.2em 1em;
+      }
+      .menu label:hover,
+      .menu label:focus {
+        background: #1c87c9;
+      }
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        padding: 8em 1em 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        transition: left 0s 0.75s;
+      }
+      [id^="slide"]:checked + .slide {
+        left: 0;
+        z-index: 100;
+        transition: left 0.65s ease-out;
+      }
+      .slide-1 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelPuntaCana.jpg");
+      }
+      .slide-2 {
+        background-image: url("../Som1_Portfolio/Assets/images/MagicKingdom.jpg");
+      }
+      .slide-3 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelLondon.JPG");
+      }
+      .slide-4 {
+        background-image: url("../Som1_Portfolio/Assets/images/travel1.JPG");
+      }
+      .slide-5 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelVancouver.jpg");
+      }
+      .slide-6 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelAllemagne.jpg");
+      }
+      .slide-7 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelBoston.webp");
+      }
+      .slide-8 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelLosAngeles.webp");
+      }
+      .slide-9 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelToronto.jpg");
+      }
+      .slide-10 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelMontTremblant.jpg");
+      }
+      .slide-11 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelVegas.webp");
+      }
+      .slide-12 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelNYC.webp");
+      }
+      .slide-13 {
+        background-image: url("../Som1_Portfolio/Assets/images/travelWildwood.jpg");
+      }
+
+      @font-face {
+        font-family: "geo";
+        src: url(../Som1_Portfolio/Assets/WebFonts/geo_sans_light/GeosansLight.ttf);
+      }
+      p {
+        color: white;
+        font-size: 4em;
+        text-shadow: 2px 2px 10px black;
+        font-family: "geo";
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="menu">
+        <label for="slide-dot-1"></label>
+        <label for="slide-dot-2"></label>
+        <label for="slide-dot-3"></label>
+        <label for="slide-dot-4"></label>
+        <label for="slide-dot-5"></label>
+        <label for="slide-dot-6"></label>
+        <label for="slide-dot-7"></label>
+        <label for="slide-dot-8"></label>
+        <label for="slide-dot-9"></label>
+        <label for="slide-dot-10"></label>
+        <label for="slide-dot-11"></label>
+        <label for="slide-dot-12"></label>
+        <label for="slide-dot-13"></label>
+      </div>
+      <input id="slide-dot-1" type="radio" name="slides" checked>
+      <div class="slide slide-1"><p>Punta Cana</p></div>
+
+      <input id="slide-dot-2" type="radio" name="slides">
+      <div class="slide slide-2"><p>Orlando</p></div>
+
+      <input id="slide-dot-3" type="radio" name="slides">
+      <div class="slide slide-3"><p>Londres</p></div>
+
+      <input id="slide-dot-4" type="radio" name="slides">
+      <div class="slide slide-4"><p>Paris</p></div>
+
+      <input id="slide-dot-5" type="radio" name="slides">
+      <div class="slide slide-5"><p>Vancouver</p></div>
+
+      <input id="slide-dot-6" type="radio" name="slides">
+      <div class="slide slide-6"><p>Allemagne</p></div>
+
+      <input id="slide-dot-7" type="radio" name="slides">
+      <div class="slide slide-7"><p>Boston</p></div>
+
+      <input id="slide-dot-8" type="radio" name="slides">
+      <div class="slide slide-8"><p>Los Angeles</p></div>
+
+      <input id="slide-dot-9" type="radio" name="slides">
+      <div class="slide slide-9"><p>Toronto</p></div>
+
+      <input id="slide-dot-10" type="radio" name="slides">
+      <div class="slide slide-10"><p>Mont Tremblant</p></div>
+
+      <input id="slide-dot-11" type="radio" name="slides">
+      <div class="slide slide-11"><p>Las Vegas</p></div>
+
+      <input id="slide-dot-12" type="radio" name="slides">
+      <div class="slide slide-12"><p>New York</p></div>
+
+      <input id="slide-dot-13" type="radio" name="slides">
+      <div class="slide slide-13"><p>WildWood</p></div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(images/Background.jpg);
+
+}
+
+@font-face {
+    font-family: "oswald";
+    src: url(../HeonMarilou_Examen1/WebFont/Oswald-Regular.ttf);
+}
+@font-face {
+    font-family: "faustina";
+    src: url(../HeonMarilou_Examen1/WebFont/Faustina-Regular.ttf);
+}
+
+:root {
+    --bordure-rouge: #ca2417;
+    --bordure-grise-caract: #d5d5d5;
+    --couleur-texte-description: #6f706f;
+    --nom-biere-bas: hsla(0,0%,100%,.4);
+}
+
+.container_principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction: row;*/
+
+    font-family: "oswald";
+
+    margin-left: 350px;
+
+    width: 800px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+        "image_biere article"
+        "foot_text foot_text";
+    
+}
+
+.image_biere {
+    grid-area: image_biere;
+    height: 80%;
+    
+    
+}
+
+.article {
+    grid-area: article;
+}
+
+
+
+.caracteristiques {
+    border-color: #d5d5d5;
+    display: flex;
+    flex-direction: row;
+
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "quatre_premiers cinquieme";
+
+    
+}
+
+.quatre_premiers {
+    grid-area: quatre_premiers;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 40% 30% 20%;
+    grid-template-areas: 
+        "six_pourcent soixante_cinq image_verre huit_dix"
+        "alcool ibu nonic service"
+        "dispo dispo dispo dispo";
+
+    
+
+}
+
+.six_pourcent {
+    grid-area: six_pourcent;
+    font-size: 20pt;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.soixante_cinq {
+    grid-area: soixante_cinq;
+    font-size: 20pt;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.image_verre {
+    grid-area: image_verre;
+
+    margin-left:31.5px;
+}
+.huit_dix {
+    grid-area: huit_dix;
+    font-size: 15pt;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.dispo {
+    grid-area: dispo;
+    font-family: "faustina";
+    font-size: 10pt;
+    text-align: center;
+}
+.alcool {
+    grid-area: alcool;
+    text-align: center;
+}
+.ibu {
+    grid-area: ibu;
+    text-align: center;
+}
+.nonic {
+    grid-area: nonic;
+    text-align: center;
+}
+.service {
+    grid-area: service;
+    text-align: center;
+}
+
+
+
+.cinquieme {
+    grid-area: cinquieme;
+    display: grid;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "densite"
+        "densite2";
+}
+
+.densite {
+    grid-area: densite;
+    text-align: center;
+    
+}
+.densite2 {
+    grid-area: densite2;
+    font-family: "faustina";
+    text-align: center;
+    font-size: 10pt;
+}
+
+.sous_titre {
+    font-family: "faustina";
+    font-size: 14pt;
+    letter-spacing: 10px;
+}
+
+.sacre {
+    font-family: "faustina";
+    font-size: 3em;
+}
+
+.description_biere {
+    text-align: justify;
+    font-family: "faustina";
+    color: #6f706f;
+    font-size: 10pt;
+}
+.foot_text {
+    grid-area: foot_text;
+    text-align: center;
+    font-size: 10em;
+    color: hsla(0,0%,100%,.4);
+    letter-spacing: 30px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 870px)
+{
+    .container_principal {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        /*flex-direction: row;*/
+    
+        font-family: "oswald";
+        width: 870px;
+        margin-left: 20%;
+        margin-top: 30px;
+
+        display: grid;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: 
+            "article"
+            "image_biere";
+        
+    }
+    
+    .foot_text {
+        grid-area: foot_text;
+        display: none;
+    }
+    .article {
+        grid-area: article;
+        width: 100%;
+        
+    }
+    .image_biere {
+        grid-area: image_biere;
+        /*height: 80%;*/
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        
+    }
+}
